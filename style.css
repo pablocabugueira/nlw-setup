@@ -36,3 +36,54 @@ header {
     font-size: 16px;
     line-height: 125%;
 }
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+#habits {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin: 50px 0px 0px 120px;
+}
+
+.habit {
+    font-size: 32px;
+    line-height: 64px;
+}
+
+#days {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.day {
+    font-family: 'Roboto Mono', monospace;
+    color: #A1A1AA;
+    text-align: center;
+}
+
+input {
+    appearance: none;
+
+    width: 64px;
+    height: 64px;
+
+    background-color: #18181B;
+
+    border: 2px solid #27272A;
+    border-radius: 8px;
+}
+
+input:checked {
+    appearance: none;
+
+    background-color: #8B5CF6;
+
+    border: 2px solid #A78BFA;
+}
