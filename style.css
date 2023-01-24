@@ -13,7 +13,12 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 100px 120px;
+    position: fixed;
+    width: 100%;
+
+    padding:  100px 120px 48px;
+
+    background-color: #09090A;
 }
 
 #register {
@@ -39,8 +44,11 @@ header {
 
 form {
     display: flex;
-    align-items: center;
     gap: 32px;
+
+    padding: 232px 50px 0px 0px;
+
+    width: fit-content;
 }
 
 #habits {
@@ -89,4 +97,10 @@ input:checked {
     background-color: #8B5CF6;
 
     border: 2px solid #A78BFA;
+}
+
+@media (max-width: 816px) {
+       #registerMyDay {
+        display: none;
+       }
 }
