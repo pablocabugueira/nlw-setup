@@ -1,13 +1,19 @@
 const form = document.querySelector('form')
 const nlwSetup = new NLWSetup(form)
+const button = document.querySelector("header button")
 
-const data = {
-    run: ["02-01", "02-02", "02-03", "02-04"],
-    water: ["02-01", "02-02", "02-03", "02-04"],
-    gym: ["02-01", "02-02", "02-03", "02-04"],
-    sleep: ["02-01", "02-02", "02-03", "02-04"],
-    pet: ["02-01", "02-02", "02-03", "02-04"],
-    fruit: ["02-01", "02-02", "02-03", "02-04"]
+button.addEventListener("click", add)
+
+function add() {
+    const today = new Date().toLocaleDateString("pt-br").slice(0, -5)
+    const dayExists = nlwSetup.dayExists(today)
+
+    if (dayExists) {
+        alert("Dia já incluso ❌")
+        return
+    }
+
+    nlwSetup.addDay(today)
 }
 
 nlwSetup.setData(data)
